@@ -319,21 +319,6 @@ namespace DemoWPF
                 }
                 else
                 {
-
-                   ModelDialogResult mdr =  mdMessage.ShowHandlerDialog( string.Format("The DataGrid max count has out of the range , you could export all the data or just only copy {0} rows data", MaxPointCount));
-                   if (mdr == ModelDialogResult.Copy)
-                   {
-                       // copy the max rows
-                       this.CopyMaxRows(targetGrid);
-                   }
-                   else if (mdr == ModelDialogResult.Export)
-                   {
-                       // export all data
-                       targetGrid.Export();
-                   }
-                   else { return; }
-
-
                     //MessageBoxResult mbr = MessageBox.Show(string.Format("The DataGrid max count has out of the range , you could export all the data or just only copy {0} rows data", MaxPointCount), "", MessageBoxButton.YesNoCancel, MessageBoxImage.Information, MessageBoxResult.Yes, MessageBoxOptions.DefaultDesktopOnly);
                     
                     //if (mbr == MessageBoxResult.Yes)
