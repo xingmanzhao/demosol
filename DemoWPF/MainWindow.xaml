@@ -1,17 +1,8 @@
 ﻿<Window x:Class="DemoWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:custom="clr-namespace:DemoWPF"
         Title="MainWindow" Height="622" Width="775"
-        Focusable="True"
-        xmlns:ModelDialog="clr-namespace:Technewlogic.Samples.WpfModalDialog"
-        xmlns:wa="clr-namespace:DemoWPF">
-    <Window.CommandBindings>
-        <CommandBinding Executed="cmdBinding_Executed" Command="{x:Static custom:MainWindow.MessageBoxCommand}">
-           
-        </CommandBinding>
-       
-    </Window.CommandBindings>
+        Focusable="True">
     <Grid>
         <Grid x:Name="gridDemo">
             <Grid.ColumnDefinitions>
@@ -33,7 +24,7 @@
                 </DataGrid.CommandBindings>
                     <DataGrid.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="Export all to csv file"  Click="MenuItem_Click" CommandParameter="{Binding  RelativeSource={RelativeSource Self}, Path=Parent}"  Command="{x:Static custom:MainWindow.ExportCMD}" ></MenuItem>
+                    <MenuItem Header="Export all to csv file"  Click="MenuItem_Click" CommandParameter="{Binding  RelativeSource={RelativeSource Self}, Path=Parent}" ></MenuItem>
                     <MenuItem Header="Copy all to clipboard" Click="CopyAllToClipboardMenuItemClicked" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Parent}"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
@@ -64,7 +55,7 @@
         </DataGrid>
         <Button Content="Create DataGrid" Height="23" HorizontalAlignment="Left" Margin="12,276,0,0" Name="btnCreateDataGrid" VerticalAlignment="Top" Width="99" Click="btnCreateDataGrid_Click" />
         <Button Content="Describe DataGrid" Height="23" HorizontalAlignment="Left" Margin="12,305,0,0" Name="btnDescribeDataGrid" VerticalAlignment="Top" Width="99" Click="btnDescribeDataGrid_Click" />
-        <Button Content="Command" CommandParameter="{Binding ElementName=dgPersons}"   Command="{x:Static custom:MainWindow.ExportCMD}" Height="23" HorizontalAlignment="Left" Margin="133,305,0,0" Name="btnCommand" VerticalAlignment="Top" Width="75" />
+        <Button Content="Command" CommandParameter="{Binding ElementName=dgPersons}"   Height="23" HorizontalAlignment="Left" Margin="133,305,0,0" Name="btnCommand" VerticalAlignment="Top" Width="75" />
         <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Right" Margin="0,306,403,0" Name="txtNumberCount" VerticalAlignment="Top" Width="65" Text="100" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="214,306,0,0" Name="txtMaxPointCount" VerticalAlignment="Top" Width="65" Text="10" Grid.ColumnSpan="2" />
         <TextBox Height="252" HorizontalAlignment="Left" Margin="316,47,0,0" Name="txtRecord" VerticalAlignment="Top" Width="160" Grid.Column="1" />
@@ -101,7 +92,5 @@
             </Grid>
             <Button Content="Create DataGrid Array" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="316,306,0,0" Name="btnCreateDataGridArray" VerticalAlignment="Top" Width="160" Click="btnCreateDataGridArray_Click" />
         </Grid>
-        <ModelDialog:ModalDialog x:Name="mdMessage" Visibility="Hidden" Owner="{Binding  ElementName=gridDemo}" />
-        <wa:WaitProcessDialog x:Name="waitProcessDialog" Visibility="Hidden" Owner="{Binding ElementName=gridDemo}"></wa:WaitProcessDialog>
     </Grid>
 </Window>
