@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWin", "DemoWin\DemoWin.csproj", "{E4665817-6A76-46F2-9C62-1E2A600B3C55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWPF", "DemoWPF\DemoWPF.csproj", "{9528E0EC-2D3A-4A0C-9F78-3065B2842706}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4665817-6A76-46F2-9C62-1E2A600B3C55}.Debug|x86.ActiveCfg = Debug|x86
+		{E4665817-6A76-46F2-9C62-1E2A600B3C55}.Debug|x86.Build.0 = Debug|x86
+		{E4665817-6A76-46F2-9C62-1E2A600B3C55}.Release|x86.ActiveCfg = Release|x86
+		{E4665817-6A76-46F2-9C62-1E2A600B3C55}.Release|x86.Build.0 = Release|x86
+		{9528E0EC-2D3A-4A0C-9F78-3065B2842706}.Debug|x86.ActiveCfg = Debug|x86
+		{9528E0EC-2D3A-4A0C-9F78-3065B2842706}.Debug|x86.Build.0 = Debug|x86
+		{9528E0EC-2D3A-4A0C-9F78-3065B2842706}.Release|x86.ActiveCfg = Release|x86
+		{9528E0EC-2D3A-4A0C-9F78-3065B2842706}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,107 @@
+﻿<Window x:Class="DemoWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:custom="clr-namespace:DemoWPF"
+        Title="MainWindow" Height="622" Width="775"
+        Focusable="True"
+        xmlns:ModelDialog="clr-namespace:Technewlogic.Samples.WpfModalDialog"
+        xmlns:wa="clr-namespace:DemoWPF">
+    <Window.CommandBindings>
+        <CommandBinding Executed="cmdBinding_Executed" Command="{x:Static custom:MainWindow.MessageBoxCommand}">
+           
+        </CommandBinding>
+       
+    </Window.CommandBindings>
+    <Grid>
+        <Grid x:Name="gridDemo">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="153*" />
+            <ColumnDefinition Width="350*" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Task" Height="23" HorizontalAlignment="Left" Margin="12,45,0,0" Name="btnTask" VerticalAlignment="Top" Width="99" Click="btnTask_Click" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,45,214,0" Name="txtTask" VerticalAlignment="Top" Width="406" Grid.ColumnSpan="2" />
+        <Button Content="Task Schedular" Height="23" HorizontalAlignment="Left" Margin="12,74,0,0" Name="btnTaskSchedular" VerticalAlignment="Top" Width="99" Click="btnTaskSchedular_Click" />
+        <Button Content="Action" Height="23" HorizontalAlignment="Left" Margin="12,103,0,0" Name="btnAction" VerticalAlignment="Top" Width="99" Click="btnAction_Click" />
+        <Button Content="Func" Height="23" HorizontalAlignment="Left" Margin="12,132,0,0" Name="btnFunc" VerticalAlignment="Top" Width="99" Click="btnFunc_Click" />
+        <Button Content="App deploy" Height="23" HorizontalAlignment="Left" Margin="12,161,0,0" Name="btnAppDeploy" VerticalAlignment="Top" Width="99" Click="btnAppDeploy_Click" />
+        <Button Content="InterLocked" Height="23" HorizontalAlignment="Left" Margin="12,190,0,0" Name="btnInterLocked" VerticalAlignment="Top" Width="99" Click="btnInterLocked_Click" />
+        <Button Content="Processor Count" Height="23" HorizontalAlignment="Left" Margin="12,219,0,0" Name="btnProcessorCount" VerticalAlignment="Top" Width="99" Click="btnProcessorCount_Click" />
+        <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="12,248,0,0" Name="button1" VerticalAlignment="Top" Width="99" Click="button1_Click" />
+        <DataGrid  Focusable="True" CopyingRowClipboardContent="dgPersons_CopyingRowClipboardContent" AutoGenerateColumns="False" Height="226" HorizontalAlignment="Left" Margin="133,73,0,0" Name="dgPersons" VerticalAlignment="Top" Width="406" HeadersVisibility="Column" Grid.ColumnSpan="2" >
+                <DataGrid.CommandBindings>
+                    <CommandBinding Command="Copy" Executed="CommandBinding_Executed" />
+                </DataGrid.CommandBindings>
+                    <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Export all to csv file"  Click="MenuItem_Click" CommandParameter="{Binding  RelativeSource={RelativeSource Self}, Path=Parent}"  Command="{x:Static custom:MainWindow.ExportCMD}" ></MenuItem>
+                    <MenuItem Header="Copy all to clipboard" Click="CopyAllToClipboardMenuItemClicked" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Parent}"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="1" Binding="{Binding Path=Name, Mode=TwoWay}" />
+                <DataGridTextColumn Header="2"  Binding="{Binding Path=Age, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call1"  Binding="{Binding Path=Call1, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call2"  Binding="{Binding Path=Call2, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call3"  Binding="{Binding Path=Call3, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call4"  Binding="{Binding Path=Call4, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call5"  Binding="{Binding Path=Call5, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call6"  Binding="{Binding Path=Call6, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call7"  Binding="{Binding Path=Call7, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call8"  Binding="{Binding Path=Call8, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call9"  Binding="{Binding Path=Call9, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call10"  Binding="{Binding Path=Call10, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call11"  Binding="{Binding Path=Call11, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call12"  Binding="{Binding Path=Call12, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call13"  Binding="{Binding Path=Call13, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call14"  Binding="{Binding Path=Call14, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call15"  Binding="{Binding Path=Call15, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call16"  Binding="{Binding Path=Call16, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call17"  Binding="{Binding Path=Call17, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call18"  Binding="{Binding Path=Call18, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call19"  Binding="{Binding Path=Call19, Mode=TwoWay}"  />
+                <DataGridTextColumn Header="Call20"  Binding="{Binding Path=Call20, Mode=TwoWay}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Create DataGrid" Height="23" HorizontalAlignment="Left" Margin="12,276,0,0" Name="btnCreateDataGrid" VerticalAlignment="Top" Width="99" Click="btnCreateDataGrid_Click" />
+        <Button Content="Describe DataGrid" Height="23" HorizontalAlignment="Left" Margin="12,305,0,0" Name="btnDescribeDataGrid" VerticalAlignment="Top" Width="99" Click="btnDescribeDataGrid_Click" />
+        <Button Content="Command" CommandParameter="{Binding ElementName=dgPersons}"   Command="{x:Static custom:MainWindow.ExportCMD}" Height="23" HorizontalAlignment="Left" Margin="133,305,0,0" Name="btnCommand" VerticalAlignment="Top" Width="75" />
+        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Right" Margin="0,306,403,0" Name="txtNumberCount" VerticalAlignment="Top" Width="65" Text="100" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="214,306,0,0" Name="txtMaxPointCount" VerticalAlignment="Top" Width="65" Text="10" Grid.ColumnSpan="2" />
+        <TextBox Height="252" HorizontalAlignment="Left" Margin="316,47,0,0" Name="txtRecord" VerticalAlignment="Top" Width="160" Grid.Column="1" />
+        <Button Content="Clear" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="235,306,0,0" Name="btnClear" VerticalAlignment="Top" Width="75" Click="btnClear_Click" />
+        <Button Content="Alter" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="154,306,0,0" Name="btnAlterWindowKeyDelegate" VerticalAlignment="Top" Width="75" Click="btnAlterWindowKeyDelegate_Click" />
+            <Grid Grid.ColumnSpan="2" Margin="12,345,48,0">
+
+                <DataGrid x:Name="AllocationsByCallStackGroupsDataGrid" ScrollViewer.HorizontalScrollBarVisibility="Visible" RowDetailsVisibilityMode="Collapsed" ClipboardCopyMode="IncludeHeader" ItemsSource="{Binding Path=GroupedMemoryInfos, Mode=OneWay}" AutoGenerateColumns="False" HorizontalAlignment="Stretch" Margin="0,0,0,20" VerticalAlignment="Stretch" Width="Auto" Padding="3" CanUserResizeRows="False" HorizontalGridLinesBrush="WhiteSmoke" VerticalGridLinesBrush="WhiteSmoke" HeadersVisibility="Column" CanUserAddRows="False" BorderThickness="0">
+                    <DataGrid.CommandBindings>
+                        <CommandBinding Command="Copy" Executed="CommandBinding_Executed" />
+                    </DataGrid.CommandBindings>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Copy all to clipboard" Click="CopyAllToClipboardMenuItemClicked" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Parent}"/>
+                            <MenuItem Header="Export all to csv file" Click="ExportDataToCSVMenuItem_Click" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Parent}"></MenuItem>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="Total actual bytes" Binding="{Binding TotalBytes, Mode=OneTime}" />
+                        <DataGridTemplateColumn Header="Java object usage change">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Right" Text="{Binding AverageBytes, Mode=OneWay}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Width="200" Header="Caller 1" Binding="{Binding Path=Callers[0].FullName, Mode=OneTime}" />
+                        <DataGridTextColumn Width="200" Header="Caller 2" Binding="{Binding Path=Callers[1].FullName, Mode=OneTime}" />
+                        <DataGridTextColumn Width="200" Header="SX Caller 1" Binding="{Binding Path=SXCallers[0].FullName, Mode=OneTime}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </Grid>
+            <Button Content="Create DataGrid Array" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="316,306,0,0" Name="btnCreateDataGridArray" VerticalAlignment="Top" Width="160" Click="btnCreateDataGridArray_Click" />
+        </Grid>
+        <ModelDialog:ModalDialog x:Name="mdMessage" Visibility="Hidden" Owner="{Binding  ElementName=gridDemo}" />
+        <wa:WaitProcessDialog x:Name="waitProcessDialog" Visibility="Hidden" Owner="{Binding ElementName=gridDemo}"></wa:WaitProcessDialog>
+    </Grid>
+</Window>

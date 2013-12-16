@@ -1,0 +1,8 @@
+C:\SULUTIONS\DemoSol\DemoWin\bin\Debug\DemoWin.exe
+C:\SULUTIONS\DemoSol\DemoWin\bin\Debug\DemoWin.pdb
+C:\SULUTIONS\DemoSol\DemoWin\obj\x86\Debug\DemoWin.Form1.resources
+C:\SULUTIONS\DemoSol\DemoWin\obj\x86\Debug\DemoWin.Properties.Resources.resources
+C:\SULUTIONS\DemoSol\DemoWin\obj\x86\Debug\DemoWin.csproj.GenerateResource.Cache
+C:\SULUTIONS\DemoSol\DemoWin\obj\x86\Debug\DemoWin.exe
+C:\SULUTIONS\DemoSol\DemoWin\obj\x86\Debug\DemoWin.pdb
+C:\SULUTIONS\DemoSol\DemoWin\obj\x86\Debug\DemoWin.csprojResolveAssemblyReference.cache
