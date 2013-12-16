@@ -91,6 +91,7 @@
 
             </Grid>
             <Button Content="Create DataGrid Array" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="316,306,0,0" Name="btnCreateDataGridArray" VerticalAlignment="Top" Width="160" Click="btnCreateDataGridArray_Click" />
+            <Button Content="develop branch" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="316,18,0,0" Name="btnDevelopBranch" VerticalAlignment="Top" Width="160" />
         </Grid>
     </Grid>
 </Window>
