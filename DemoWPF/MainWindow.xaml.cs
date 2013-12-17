@@ -600,7 +600,7 @@ namespace DemoWPF
 
         private void btnDevelopBranch_Click(object sender, RoutedEventArgs e)
         {
-            string msg = "develop branch msg : try to merge , rebase, mofidied 1, mofidied 2";
+            string msg = "develop branch msg : try to merge , rebase";
             MessageBox.Show(msg);
         }
     }
