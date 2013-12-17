@@ -594,7 +594,8 @@ namespace DemoWPF
 
         private void btnMasterBranch_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Master button message");
+            string msg = "add maintain branch";
+            MessageBox.Show(msg);
         }
     }
 
