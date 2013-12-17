@@ -600,7 +600,7 @@ namespace DemoWPF
 
         private void btnDevelopBranch_Click(object sender, RoutedEventArgs e)
         {
-            string msg = "develop branch msg : ";
+            string msg = "develop branch msg : try to merge";
             MessageBox.Show(msg);
         }
     }
