@@ -591,6 +591,11 @@ namespace DemoWPF
                 }
             });
         }
+
+        private void btnMasterBranch_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Master button message");
+        }
     }
 
     public class ExportTenOfIntegerTaskSchedular : TaskScheduler
