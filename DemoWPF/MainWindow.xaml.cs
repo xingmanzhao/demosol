@@ -594,7 +594,7 @@ namespace DemoWPF
 
         private void btnMasterBranch_Click(object sender, RoutedEventArgs e)
         {
-            string msg = "add maintain branch";
+            string msg = "add maintain branch : try to merge in git";
             MessageBox.Show(msg);
         }
     }
