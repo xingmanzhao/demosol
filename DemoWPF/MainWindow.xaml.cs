@@ -597,6 +597,12 @@ namespace DemoWPF
             string msg = "add maintain branch : try to merge in git";
             MessageBox.Show(msg);
         }
+
+        private void btnDevelopBranch_Click(object sender, RoutedEventArgs e)
+        {
+            string msg = "develop branch msg : ";
+            MessageBox.Show(msg);
+        }
     }
 
     public class ExportTenOfIntegerTaskSchedular : TaskScheduler
