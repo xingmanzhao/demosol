@@ -591,6 +591,12 @@ namespace DemoWPF
                 }
             });
         }
+
+        private void btnDevelopBranch_Click(object sender, RoutedEventArgs e)
+        {
+            string msg = "develop branch msg : ";
+            MessageBox.Show(msg);
+        }
     }
 
     public class ExportTenOfIntegerTaskSchedular : TaskScheduler
