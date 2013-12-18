@@ -608,6 +608,7 @@ namespace DemoWPF
             msgBuilder.Append("add dev_a branch, ");
             msgBuilder.Append("add msg on dev_a branch, ");
             msgBuilder.Append("add msg2 on dev_a branch, ");
+            msgBuilder.Append("add msg3 on dev_a branch, ");
             MessageBox.Show(msgBuilder.ToString());
         }
     }
