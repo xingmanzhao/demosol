@@ -91,8 +91,8 @@
 
             </Grid>
             <Button Content="Create DataGrid Array" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="316,306,0,0" Name="btnCreateDataGridArray" VerticalAlignment="Top" Width="160" Click="btnCreateDataGridArray_Click" />
-            <Button Content="master branch  ssdsdsd" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="46,16,0,0" Name="btnMasterBranch" VerticalAlignment="Top" Width="264" />
-            <Button Content="develop branch" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="316,18,0,0" Name="btnDevelopBranch" VerticalAlignment="Top" Width="160" />
+            <Button Content="master branch  ssdsdsd" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="46,16,0,0" Name="btnMasterBranch" VerticalAlignment="Top" Width="264" Click="btnMasterBranch_Click" />
+            <Button Content="develop branch" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="316,18,0,0" Name="btnDevelopBranch" VerticalAlignment="Top" Width="160" Click="btnDevelopBranch_Click" />
         </Grid>
     </Grid>
 </Window>
