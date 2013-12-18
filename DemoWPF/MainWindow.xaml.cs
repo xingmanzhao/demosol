@@ -604,6 +604,7 @@ namespace DemoWPF
             msgBuilder.Append("develop branch msg : ");
             msgBuilder.Append("try to merge , rebase, ");
             msgBuilder.Append("add develop branch, ");
+            msgBuilder.Append("add maintain branch, ");
             MessageBox.Show(msgBuilder.ToString());
         }
     }
