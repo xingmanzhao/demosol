@@ -613,6 +613,7 @@ namespace DemoWPF
             msgBuilder.Append("add msg5 on dev_a branch, ");
             msgBuilder.Append("add msg6 on dev_a branch, ");
             msgBuilder.Append("add msg7 on dev_a branch, ");
+            msgBuilder.Append("add msg8 on dev_a branch, ");
             MessageBox.Show(msgBuilder.ToString());
         }
     }
