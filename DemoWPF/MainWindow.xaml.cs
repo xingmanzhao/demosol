@@ -600,8 +600,11 @@ namespace DemoWPF
 
         private void btnDevelopBranch_Click(object sender, RoutedEventArgs e)
         {
-            string msg = "develop branch msg : try to merge , rebase";
-            MessageBox.Show(msg);
+            StringBuilder msgBuilder = new StringBuilder();
+            msgBuilder.Append("develop branch msg : ");
+            msgBuilder.Append("try to merge , rebase, ");
+            msgBuilder.Append("add develop branch, ");
+            MessageBox.Show(msgBuilder.ToString());
         }
     }
 
