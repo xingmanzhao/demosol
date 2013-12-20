@@ -621,6 +621,7 @@ namespace DemoWPF
             msgBuilder.Append("add passage0 on master branch, ");
             msgBuilder.Append("add passage1 on master branch, ");
             msgBuilder.Append("add passage2 on master branch, ");
+            msgBuilder.Append("add passage3 on master branch, ");
             MessageBox.Show(msgBuilder.ToString());
         }
     }
