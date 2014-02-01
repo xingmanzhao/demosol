@@ -58,12 +58,12 @@
         <Button Content="Command" CommandParameter="{Binding ElementName=dgPersons}"   Height="23" HorizontalAlignment="Left" Margin="133,305,0,0" Name="btnCommand" VerticalAlignment="Top" Width="75" />
         <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Right" Margin="0,306,403,0" Name="txtNumberCount" VerticalAlignment="Top" Width="65" Text="100" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="214,306,0,0" Name="txtMaxPointCount" VerticalAlignment="Top" Width="65" Text="10" Grid.ColumnSpan="2" />
-        <TextBox Height="252" HorizontalAlignment="Left" Margin="316,47,0,0" Name="txtRecord" VerticalAlignment="Top" Width="160" Grid.Column="1" />
+        <TextBox Height="252" HorizontalAlignment="Left" Margin="316,47,0,0" Name="txtRecord" VerticalAlignment="Top" Width="202" Grid.Column="1" />
         <Button Content="Clear" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="235,306,0,0" Name="btnClear" VerticalAlignment="Top" Width="75" Click="btnClear_Click" />
         <Button Content="Alter" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="154,306,0,0" Name="btnAlterWindowKeyDelegate" VerticalAlignment="Top" Width="75" Click="btnAlterWindowKeyDelegate_Click" />
-            <Grid Grid.ColumnSpan="2" Margin="12,345,48,0">
+            <Grid Grid.ColumnSpan="2" Margin="12,345,48,115">
 
-                <DataGrid x:Name="AllocationsByCallStackGroupsDataGrid" ScrollViewer.HorizontalScrollBarVisibility="Visible" RowDetailsVisibilityMode="Collapsed" ClipboardCopyMode="IncludeHeader" ItemsSource="{Binding Path=GroupedMemoryInfos, Mode=OneWay}" AutoGenerateColumns="False" HorizontalAlignment="Stretch" Margin="0,0,0,20" VerticalAlignment="Stretch" Width="Auto" Padding="3" CanUserResizeRows="False" HorizontalGridLinesBrush="WhiteSmoke" VerticalGridLinesBrush="WhiteSmoke" HeadersVisibility="Column" CanUserAddRows="False" BorderThickness="0">
+                <DataGrid x:Name="AllocationsByCallStackGroupsDataGrid" ScrollViewer.HorizontalScrollBarVisibility="Visible" RowDetailsVisibilityMode="Collapsed" ClipboardCopyMode="IncludeHeader" ItemsSource="{Binding Path=GroupedMemoryInfos, Mode=OneWay}" AutoGenerateColumns="False" HorizontalAlignment="Stretch" Margin="0,0,0,41" VerticalAlignment="Stretch" Width="Auto" Padding="3" CanUserResizeRows="False" HorizontalGridLinesBrush="WhiteSmoke" VerticalGridLinesBrush="WhiteSmoke" HeadersVisibility="Column" CanUserAddRows="False" BorderThickness="0">
                     <DataGrid.CommandBindings>
                         <CommandBinding Command="Copy" Executed="CommandBinding_Executed" />
                     </DataGrid.CommandBindings>
@@ -92,7 +92,8 @@
             </Grid>
             <Button Content="Create DataGrid Array" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="316,306,0,0" Name="btnCreateDataGridArray" VerticalAlignment="Top" Width="160" Click="btnCreateDataGridArray_Click" />
             <Button Content="master branch  ssdsdsd" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="46,16,0,0" Name="btnMasterBranch" VerticalAlignment="Top" Width="264" Click="btnMasterBranch_Click" />
-            <Button Content="develop branch" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="316,18,0,0" Name="btnDevelopBranch" VerticalAlignment="Top" Width="160" Click="btnDevelopBranch_Click" />
+            <Button Content="develop branch" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="316,18,0,0" Name="btnDevelopBranch" VerticalAlignment="Top" Width="107" Click="btnDevelopBranch_Click" />
+            <Button Content="Virtual Func" Height="23" HorizontalAlignment="Left" Margin="429,18,0,0" Name="btnVirtualFunc" VerticalAlignment="Top" Width="89" Click="btnVirtualFunc_Click" Grid.Column="1" />
         </Grid>
     </Grid>
 </Window>

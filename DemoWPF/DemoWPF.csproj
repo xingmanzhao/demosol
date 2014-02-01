@@ -95,6 +95,7 @@
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VirtualClass.cs" />
     <Compile Include="WaitAnimation.xaml.cs">
       <DependentUpon>WaitAnimation.xaml</DependentUpon>
     </Compile>

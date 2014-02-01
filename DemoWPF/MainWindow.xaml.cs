@@ -621,8 +621,35 @@ namespace DemoWPF
             msgBuilder.Append("add passage0 on master branch, ");
             msgBuilder.Append("add passage1 on master branch, ");
             msgBuilder.Append("add passage2 on master branch, ");
-            msgBuilder.Append("add passage3 on master branch, ");
+            msgBuilder.Append("amend : add passage3 on master branch, ");
             MessageBox.Show(msgBuilder.ToString());
+        }
+
+        private void btnVirtualFunc_Click(object sender, RoutedEventArgs e)
+        {
+            BaseVirtual bvSansum = new Sansum();
+            this.txtRecord.AppendText(string.Format("{0}{1}{2}", "------------", "Base Original START", System.Environment.NewLine));
+            this.txtRecord.AppendText(string.Format("{0}{1}", bvSansum.F(), System.Environment.NewLine));
+            this.txtRecord.AppendText(string.Format("{0}{1}", bvSansum.G(), System.Environment.NewLine));
+            BaseVirtual bvHTC = new HTC();
+            this.txtRecord.AppendText(string.Format("{0}{1}", bvHTC.F(), System.Environment.NewLine));
+            this.txtRecord.AppendText(string.Format("{0}{1}", bvHTC.G(), System.Environment.NewLine));
+            BaseVirtual bvApple = new Apple();
+            this.txtRecord.AppendText(string.Format("{0}{1}", bvApple.F(), System.Environment.NewLine));
+            this.txtRecord.AppendText(string.Format("{0}{1}", bvApple.G(), System.Environment.NewLine));
+            this.txtRecord.AppendText(string.Format("{0}{1}{2}", "------------", "Base Original END", System.Environment.NewLine));
+
+            Sansum ss = new Sansum();
+            this.txtRecord.AppendText(string.Format("{0}{1}{2}", "------------", "Individual START", System.Environment.NewLine));
+            this.txtRecord.AppendText(string.Format("{0}{1}", ss.F(), System.Environment.NewLine));
+            this.txtRecord.AppendText(string.Format("{0}{1}", ss.G(), System.Environment.NewLine));
+            HTC htc = new HTC();
+            this.txtRecord.AppendText(string.Format("{0}{1}", htc.F(), System.Environment.NewLine));
+            this.txtRecord.AppendText(string.Format("{0}{1}", htc.G(), System.Environment.NewLine));
+            Apple apple = new Apple();
+            this.txtRecord.AppendText(string.Format("{0}{1}", apple.F(), System.Environment.NewLine));
+            this.txtRecord.AppendText(string.Format("{0}{1}", apple.G(), System.Environment.NewLine));
+            this.txtRecord.AppendText(string.Format("{0}{1}{2}", "------------", "Individual END", System.Environment.NewLine));
         }
     }
 
